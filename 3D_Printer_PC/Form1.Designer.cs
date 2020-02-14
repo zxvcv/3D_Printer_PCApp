@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -118,19 +118,19 @@
             // connectionToolStripMenuItem
             // 
             this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
-            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.connectionToolStripMenuItem.Text = "Connection";
             this.connectionToolStripMenuItem.Click += new System.EventHandler(this.connectionToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(154, 6);
             // 
             // exitApplicationToolStripMenuItem
             // 
             this.exitApplicationToolStripMenuItem.Name = "exitApplicationToolStripMenuItem";
-            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitApplicationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exitApplicationToolStripMenuItem.Text = "Exit Application";
             this.exitApplicationToolStripMenuItem.Click += new System.EventHandler(this.exitApplicationToolStripMenuItem_Click);
             // 
@@ -146,7 +146,7 @@
             // sDCardToolStripMenuItem
             // 
             this.sDCardToolStripMenuItem.Name = "sDCardToolStripMenuItem";
-            this.sDCardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sDCardToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.sDCardToolStripMenuItem.Text = "SD Card";
             // 
             // motorsToolStripMenuItem
@@ -164,21 +164,21 @@
             // motor1ToolStripMenuItem
             // 
             this.motor1ToolStripMenuItem.Name = "motor1ToolStripMenuItem";
-            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.motor1ToolStripMenuItem.Text = "Motor1";
             this.motor1ToolStripMenuItem.Click += new System.EventHandler(this.motor1ToolStripMenuItem_Click);
             // 
             // motor2ToolStripMenuItem
             // 
             this.motor2ToolStripMenuItem.Name = "motor2ToolStripMenuItem";
-            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.motor2ToolStripMenuItem.Text = "Motor2";
             this.motor2ToolStripMenuItem.Click += new System.EventHandler(this.motor2ToolStripMenuItem_Click);
             // 
             // motor3ToolStripMenuItem
             // 
             this.motor3ToolStripMenuItem.Name = "motor3ToolStripMenuItem";
-            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.motor3ToolStripMenuItem.Text = "Motor3";
             this.motor3ToolStripMenuItem.Click += new System.EventHandler(this.motor3ToolStripMenuItem_Click);
             // 
@@ -186,7 +186,7 @@
             // 
             this.motor4ToolStripMenuItem.Enabled = false;
             this.motor4ToolStripMenuItem.Name = "motor4ToolStripMenuItem";
-            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.motor4ToolStripMenuItem.Text = "Motor4";
             this.motor4ToolStripMenuItem.Click += new System.EventHandler(this.motor4ToolStripMenuItem_Click);
             // 
@@ -194,7 +194,7 @@
             // 
             this.motor5ToolStripMenuItem.Enabled = false;
             this.motor5ToolStripMenuItem.Name = "motor5ToolStripMenuItem";
-            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.motor5ToolStripMenuItem.Text = "Motor5";
             this.motor5ToolStripMenuItem.Click += new System.EventHandler(this.motor5ToolStripMenuItem_Click);
             // 
@@ -211,13 +211,13 @@
             // headToolStripMenuItem
             // 
             this.headToolStripMenuItem.Name = "headToolStripMenuItem";
-            this.headToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.headToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.headToolStripMenuItem.Text = "Head";
             // 
             // boardToolStripMenuItem
             // 
             this.boardToolStripMenuItem.Name = "boardToolStripMenuItem";
-            this.boardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.boardToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.boardToolStripMenuItem.Text = "Board";
             // 
             // helpToolStripMenuItem
@@ -390,34 +390,34 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(249, 60);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(534, 89);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
             this.chart2.Location = new System.Drawing.Point(249, 200);
             this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(534, 89);
             this.chart2.TabIndex = 10;
             this.chart2.Text = "chart2";

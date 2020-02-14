@@ -18,6 +18,7 @@ namespace _3D_Printer_PC
         public Form1()
         {
             InitializeComponent();
+            this.timer1.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -125,7 +126,7 @@ namespace _3D_Printer_PC
         private void timer1_Tick(object sender, EventArgs e)
         {
             string message;
-
+            
             bool result = Connector.outputMessages.TryDequeue(out message);
 
             if (result)

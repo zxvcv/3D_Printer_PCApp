@@ -66,7 +66,7 @@ namespace _3D_Printer_PC
 
         public static void sendMessage(string message)
         {
-            serialPort.Write(message);
+            serialPort.Write(message + '\n');
         }
     }
 }
