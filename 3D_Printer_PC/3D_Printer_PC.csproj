@@ -67,6 +67,7 @@
     <Compile Include="MotorController.Designer.cs">
       <DependentUpon>MotorController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MotorSettings.cs" />
     <Compile Include="PortAlreadyClosedException.cs" />
     <Compile Include="PortAlreadyOpenException.cs" />
     <Compile Include="Program.cs" />

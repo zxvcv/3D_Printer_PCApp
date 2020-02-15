@@ -31,7 +31,21 @@ namespace _3D_Printer_PC
             MotorController mc = new MotorController();
             mc.motorNumber = 1;
             mc.Text += "1";
+            //Connector.outputMessages.Enqueue("M1DR");
+            //string[] data = Connector.readLine().Split(' ');
+            string[] data = { "aaa", "12.5", "15.4", "18.3", "11.0", "3.8" };
+            Settings.motor1.position = Double.Parse(data[1].Replace('.', ','));
+            Settings.motor1.positionZero = Double.Parse(data[2].Replace('.', ','));
+            Settings.motor1.positionEnd = Double.Parse(data[3].Replace('.', ','));
+            Settings.motor1.speed = Double.Parse(data[4].Replace('.', ','));
+            Settings.motor1.maxSpeed = Double.Parse(data[5].Replace('.', ','));
+            mc.Controls.Find("positionVal", true)[0].Text = Settings.motor1.position.ToString();
+            mc.Controls.Find("zeroPositionVal", true)[0].Text = Settings.motor1.positionZero.ToString();
+            mc.Controls.Find("endPositionVal", true)[0].Text = Settings.motor1.positionEnd.ToString();
+            mc.Controls.Find("speedVal", true)[0].Text = Settings.motor1.speed.ToString();
+            mc.Controls.Find("maxSpeedVal", true)[0].Text = Settings.motor1.maxSpeed.ToString();
             mc.Show();
+            
         }
 
         private void motor2ToolStripMenuItem_Click(object sender, EventArgs e)

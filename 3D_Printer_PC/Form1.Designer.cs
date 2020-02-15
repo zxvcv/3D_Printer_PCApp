@@ -164,21 +164,21 @@
             // motor1ToolStripMenuItem
             // 
             this.motor1ToolStripMenuItem.Name = "motor1ToolStripMenuItem";
-            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor1ToolStripMenuItem.Text = "Motor1";
             this.motor1ToolStripMenuItem.Click += new System.EventHandler(this.motor1ToolStripMenuItem_Click);
             // 
             // motor2ToolStripMenuItem
             // 
             this.motor2ToolStripMenuItem.Name = "motor2ToolStripMenuItem";
-            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor2ToolStripMenuItem.Text = "Motor2";
             this.motor2ToolStripMenuItem.Click += new System.EventHandler(this.motor2ToolStripMenuItem_Click);
             // 
             // motor3ToolStripMenuItem
             // 
             this.motor3ToolStripMenuItem.Name = "motor3ToolStripMenuItem";
-            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor3ToolStripMenuItem.Text = "Motor3";
             this.motor3ToolStripMenuItem.Click += new System.EventHandler(this.motor3ToolStripMenuItem_Click);
             // 
@@ -186,7 +186,7 @@
             // 
             this.motor4ToolStripMenuItem.Enabled = false;
             this.motor4ToolStripMenuItem.Name = "motor4ToolStripMenuItem";
-            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor4ToolStripMenuItem.Text = "Motor4";
             this.motor4ToolStripMenuItem.Click += new System.EventHandler(this.motor4ToolStripMenuItem_Click);
             // 
@@ -194,7 +194,7 @@
             // 
             this.motor5ToolStripMenuItem.Enabled = false;
             this.motor5ToolStripMenuItem.Name = "motor5ToolStripMenuItem";
-            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor5ToolStripMenuItem.Text = "Motor5";
             this.motor5ToolStripMenuItem.Click += new System.EventHandler(this.motor5ToolStripMenuItem_Click);
             // 

@@ -68,5 +68,10 @@ namespace _3D_Printer_PC
         {
             serialPort.Write(message + '\n');
         }
+
+        public static string readLine()
+        {
+            return serialPort.ReadLine();
+        }
     }
 }
