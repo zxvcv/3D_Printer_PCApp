@@ -10,8 +10,17 @@ namespace _3D_Printer_PC
 {
     public static class Connector
     {
-        private static SerialPort serialPort = new SerialPort();
-        public static ConcurrentQueue<string> outputMessages { get; set; } = new ConcurrentQueue<string>();
+        public static SerialPort serialPort { get; set; }
+        public static ConcurrentQueue<string> outputMessages { get; set; }
+        public static ConcurrentQueue<string> inputMessages { get; set; }
+
+        static Connector()
+        {
+            serialPort = new SerialPort();
+            serialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+            outputMessages = new ConcurrentQueue<string>();
+            inputMessages = new ConcurrentQueue<string>();
+        }
 
         public static string[] getAllPorstNames()
         {
@@ -26,21 +35,6 @@ namespace _3D_Printer_PC
         public static void setBaudRate(int baudRate)
         {
             serialPort.BaudRate = baudRate;
-        }
-
-        public static void setParity(Parity parity)
-        {
-            serialPort.Parity = parity;
-        }
-
-        public static void setPortStopBits(StopBits stopBits)
-        {
-            serialPort.StopBits = stopBits;
-        }
-
-        public static void setPortHandshake(Handshake handshake)
-        {
-            serialPort.Handshake = handshake;
         }
 
         public static void connect()
@@ -69,9 +63,10 @@ namespace _3D_Printer_PC
             serialPort.Write(message + '\n');
         }
 
-        public static string readLine()
+        private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            return serialPort.ReadLine();
+            string indata = Connector.serialPort.ReadExisting();
+            Connector.inputMessages.Enqueue(indata + "\n");
         }
     }
 }
