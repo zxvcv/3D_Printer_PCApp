@@ -48,5 +48,10 @@ namespace _3D_Printer_PC
         {
             Connector.outputMessages.Enqueue("M" + motorNumber + "SM " + maxSpeedSet.Value.ToString().Replace(',', '.'));
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

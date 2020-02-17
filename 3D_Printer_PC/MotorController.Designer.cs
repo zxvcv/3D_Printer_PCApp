@@ -51,6 +51,7 @@
             this.distanceGrp = new System.Windows.Forms.GroupBox();
             this.distanceMovButt = new System.Windows.Forms.Button();
             this.distanceSet = new System.Windows.Forms.NumericUpDown();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.endPositionGrp.SuspendLayout();
             this.zeroPositionGrp.SuspendLayout();
             this.positionGrp.SuspendLayout();
@@ -300,12 +301,24 @@
             this.distanceSet.Size = new System.Drawing.Size(77, 20);
             this.distanceSet.TabIndex = 0;
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(220, 317);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 29;
+            this.ExitButton.Text = "CLOSE";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
             // MotorController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(307, 321);
+            this.ClientSize = new System.Drawing.Size(307, 349);
+            this.ControlBox = false;
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.positionGrp);
             this.Controls.Add(this.maxspeedGrp);
             this.Controls.Add(this.speedGrp);
@@ -335,9 +348,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox endPositionGrp;
-        private System.Windows.Forms.Label endPositionVal;
         private System.Windows.Forms.GroupBox zeroPositionGrp;
-        private System.Windows.Forms.Label zeroPositionVal;
         private System.Windows.Forms.GroupBox positionGrp;
         private System.Windows.Forms.Button positionEndSetButt;
         private System.Windows.Forms.Button positionZeroSetButt;
@@ -348,14 +359,17 @@
         private System.Windows.Forms.Label _M1_X_Speed;
         private System.Windows.Forms.GroupBox distanceGrp;
         private System.Windows.Forms.Button distanceMovButt;
-        private System.Windows.Forms.NumericUpDown distanceSet;
-        private System.Windows.Forms.TextBox positionVal;
         private System.Windows.Forms.NumericUpDown positionSet;
         private System.Windows.Forms.Button maxSpeedSetButt;
-        private System.Windows.Forms.TextBox maxSpeedVal;
         private System.Windows.Forms.NumericUpDown maxSpeedSet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button speedSetButt;
-        private System.Windows.Forms.TextBox speedVal;
+        public System.Windows.Forms.Label endPositionVal;
+        public System.Windows.Forms.Label zeroPositionVal;
+        public System.Windows.Forms.NumericUpDown distanceSet;
+        public System.Windows.Forms.TextBox positionVal;
+        public System.Windows.Forms.TextBox maxSpeedVal;
+        public System.Windows.Forms.TextBox speedVal;
+        private System.Windows.Forms.Button ExitButton;
     }
 }

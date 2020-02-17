@@ -65,7 +65,7 @@ namespace _3D_Printer_PC
 
         private static void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
-            string indata = Connector.serialPort.ReadExisting();
+            string indata = Connector.serialPort.ReadLine();
             Connector.inputMessages.Enqueue(indata + "\n");
         }
     }

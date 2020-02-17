@@ -20,11 +20,6 @@ namespace _3D_Printer_PC
         public static MotorController mc4 { get; set; } = new MotorController();
         public static MotorController mc5 { get; set; } = new MotorController();
 
-        private TextBox positionValField;
-        private Label zeroPositionValField;
-        private Label endPositionValField;
-        private TextBox speedValField;
-        private TextBox maxSpeedValField;
 
         public Form1()
         {
@@ -33,11 +28,6 @@ namespace _3D_Printer_PC
             //motor1
             mc1.motorNumber = 1;
             mc1.Text += "1";
-            positionValField = (TextBox)mc1.Controls.Find("positionVal", true)[0];
-            zeroPositionValField = (Label)mc1.Controls.Find("zeroPositionVal", true)[0];
-            endPositionValField = (Label)mc1.Controls.Find("endPositionVal", true)[0];
-            speedValField = (TextBox)mc1.Controls.Find("speedVal", true)[0];
-            maxSpeedValField = (TextBox)mc1.Controls.Find("maxSpeedVal", true)[0];
             //motor2
             mc2.motorNumber = 2;
             mc2.Text += "2";
@@ -59,21 +49,8 @@ namespace _3D_Printer_PC
 
         private void motor1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Connector.outputMessages.Enqueue("M1DR");
-            //string[] data = Connector.readLine().Split(' ');
-            string[] data = { "aaa", "12.5", "15.4", "18.3", "11.0", "3.8" };
-            Settings.motor1.position = Double.Parse(data[1].Replace('.', ','));
-            Settings.motor1.positionZero = Double.Parse(data[2].Replace('.', ','));
-            Settings.motor1.positionEnd = Double.Parse(data[3].Replace('.', ','));
-            Settings.motor1.speed = Double.Parse(data[4].Replace('.', ','));
-            Settings.motor1.maxSpeed = Double.Parse(data[5].Replace('.', ','));
-            positionValField.Text = Settings.motor1.position.ToString();
-            zeroPositionValField.Text = Settings.motor1.positionZero.ToString();
-            endPositionValField.Text = Settings.motor1.positionEnd.ToString();
-            speedValField.Text = Settings.motor1.speed.ToString();
-            maxSpeedValField.Text = Settings.motor1.maxSpeed.ToString();
+            CommandsManager.getDataMotor1();
             mc1.Show();
-            
         }
 
         private void motor2ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,7 +144,10 @@ namespace _3D_Printer_PC
             
             if(Connector.inputMessages.TryDequeue(out message))
             {
-                textBox1.Text += message + " (" + num++ + ")" + '\n';
+                textBox1.Text += message + "\n";
+                CommandData commandData = CommandsParser.parseCommand(message);
+                if(commandData.execute != null)
+                    CommandsParser.executeCommand(commandData);
             }
         }
     }
