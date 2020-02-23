@@ -41,7 +41,7 @@ namespace _3D_Printer_PC
 
         private void speedSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "SS " + speedSetVal.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("M" + motorNumber + "SS " + speedSetVal.Text.Replace(',', '.'));
         }
 
         private void maxSpeedSetButt_Click(object sender, EventArgs e)
