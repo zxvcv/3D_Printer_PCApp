@@ -53,5 +53,10 @@ namespace _3D_Printer_PC
         {
             this.Hide();
         }
+
+        private void MotorController_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

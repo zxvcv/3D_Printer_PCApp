@@ -136,6 +136,11 @@
             this.positionSet.DecimalPlaces = 2;
             this.positionSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.positionSet.Location = new System.Drawing.Point(188, 19);
+            this.positionSet.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.positionSet.Name = "positionSet";
             this.positionSet.Size = new System.Drawing.Size(78, 20);
             this.positionSet.TabIndex = 11;
@@ -297,6 +302,11 @@
             this.distanceSet.DecimalPlaces = 2;
             this.distanceSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.distanceSet.Location = new System.Drawing.Point(19, 19);
+            this.distanceSet.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.distanceSet.Name = "distanceSet";
             this.distanceSet.Size = new System.Drawing.Size(77, 20);
             this.distanceSet.TabIndex = 0;
@@ -323,9 +333,11 @@
             this.Controls.Add(this.maxspeedGrp);
             this.Controls.Add(this.speedGrp);
             this.Controls.Add(this.distanceGrp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "MotorController";
             this.Text = "Motor";
+            this.Load += new System.EventHandler(this.MotorController_Load);
             this.endPositionGrp.ResumeLayout(false);
             this.endPositionGrp.PerformLayout();
             this.zeroPositionGrp.ResumeLayout(false);
