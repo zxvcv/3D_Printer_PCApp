@@ -13,38 +13,55 @@ namespace _3D_Printer_PC
         static CommandsParser()
         {
             cmds = new Dictionary<string, CommandData.Executable>();
-            cmds.Add("M1D", dataMotor1);
+            cmds.Add("DT", dataMotor);
         }
 
         public static CommandData parseCommand(string command)
         {
             string[] splited = command.Split(new char[] { ' ' });
-            double[] args = new double[splited.Length - 1];
-            for (int i = 1; i < CommandData.MAX_ARGS_NUM || i < splited.Length; ++i)
-                args[i - 1] = Double.Parse(splited[i].Replace('.', ','));
-
             CommandData data = new CommandData();
-            data.arguments = args;
-            CommandData.Executable exe;
+            int argPos = 0;
+
+            //command
+            CommandData.Executable exe = null;
             cmds.TryGetValue(splited[0], out exe);
             data.execute = exe;
+
+            if(exe != null)
+            {
+                if (splited[0].Equals("DT"))
+                {
+                    argPos = 2;
+                    data.arguments = new double[5];
+                    switch (splited[1][1])
+                    {
+                        case '1': data.motor = Settings.motor1; break;
+                        case '2': data.motor = Settings.motor2; break;
+                        default: data.motor = null; break;
+                    }
+                }
+            }
+
+            for (int i = argPos; i < data.arguments.Length + argPos; ++i)
+                data.arguments[i - argPos] = Double.Parse(splited[i].Replace('.', ','));
+
             return data;
         }
 
         public static void executeCommand(CommandData data)
         {
-            data.execute(data.arguments);
+            data.execute(data);
         }
 
         //commands
-        private static void dataMotor1(double[] args)
+        private static void dataMotor(CommandData args)
         {
-            Settings.motor1.position = args[0];
-            Settings.motor1.positionZero = args[1];
-            Settings.motor1.positionEnd = args[2];
-            Settings.motor1.speed = args[3];
-            Settings.motor1.maxSpeed = args[4];
-            Settings.motor1.update();
+            args.motor.position = args.arguments[0];
+            args.motor.positionZero = args.arguments[1];
+            args.motor.positionEnd = args.arguments[2];
+            args.motor.speed = args.arguments[3];
+            args.motor.maxSpeed = args.arguments[4];
+            args.motor.update();
         }
     }
 }

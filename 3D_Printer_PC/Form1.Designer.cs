@@ -76,7 +76,6 @@
             this._headTempVal = new System.Windows.Forms.NumericUpDown();
             this._boardTempVal = new System.Windows.Forms.NumericUpDown();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.headPositionGrp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headPosZ)).BeginInit();
@@ -489,21 +488,12 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(261, 327);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(522, 174);
-            this.textBox1.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1049, 531);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1049, 340);
             this.Controls.Add(this._boardTempVal);
             this.Controls.Add(this._headTempVal);
             this.Controls.Add(this._boardTemperature);
@@ -516,10 +506,10 @@
             this.Controls.Add(this.headSpeadGrp);
             this.Controls.Add(this.headPositionGrp);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.headPositionGrp.ResumeLayout(false);
@@ -583,7 +573,6 @@
         private System.Windows.Forms.NumericUpDown _headTempVal;
         private System.Windows.Forms.NumericUpDown _boardTempVal;
         private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.TextBox textBox1;
     }
 }
 

@@ -42,11 +42,6 @@ namespace _3D_Printer_PC
             mc5.Text += "5";
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void motor1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CommandsManager.getDataMotor1();
@@ -55,6 +50,7 @@ namespace _3D_Printer_PC
 
         private void motor2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CommandsManager.getDataMotor2();
             mc2.Show();
         }
 
@@ -137,14 +133,12 @@ namespace _3D_Printer_PC
             string message;
             
             bool result = Connector.outputMessages.TryDequeue(out message);
-
             if (result)
                 Connector.sendMessage(message);
 
             
             if(Connector.inputMessages.TryDequeue(out message))
             {
-                textBox1.Text += message + "\n";
                 CommandData commandData = CommandsParser.parseCommand(message);
                 if(commandData.execute != null)
                     CommandsParser.executeCommand(commandData);

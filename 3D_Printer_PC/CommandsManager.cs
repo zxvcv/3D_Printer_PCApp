@@ -10,7 +10,12 @@ namespace _3D_Printer_PC
     {
         public static void getDataMotor1()
         {
-            Connector.outputMessages.Enqueue("M1DR");
+            Connector.outputMessages.Enqueue("DR M1");
+        }
+
+        public static void getDataMotor2()
+        {
+            Connector.outputMessages.Enqueue("DR M2");
         }
     }
 }

@@ -21,32 +21,32 @@ namespace _3D_Printer_PC
 
         private void positionSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "PM " + positionSet.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("PM M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));
         }
 
         private void positionZeroSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "PZ " + positionSet.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("PZ M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));
         }
 
         private void positionEndSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "PE " + positionSet.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("PE M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));
         }
 
         private void distanceMovButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "DM " + distanceSet.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("DM M" + motorNumber + " " + distanceSet.Value.ToString().Replace(',', '.'));
         }
 
         private void speedSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "SS " + speedSetVal.Text.Replace(',', '.'));
+            Connector.outputMessages.Enqueue("SS M" + motorNumber + " " + speedSetVal.Text.Replace(',', '.'));
         }
 
         private void maxSpeedSetButt_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("M" + motorNumber + "SM " + maxSpeedSet.Value.ToString().Replace(',', '.'));
+            Connector.outputMessages.Enqueue("SM M" + motorNumber + " " + maxSpeedSet.Value.ToString().Replace(',', '.'));
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
