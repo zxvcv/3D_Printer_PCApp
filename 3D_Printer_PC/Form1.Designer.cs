@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,12 +45,15 @@
             this.motorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motor1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motor2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motor34ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motor3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motor4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motor5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temperatureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motorsCouplingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headPositionGrp = new System.Windows.Forms.GroupBox();
             this.headPosZ = new System.Windows.Forms.NumericUpDown();
@@ -98,6 +101,7 @@
             this.programToolStripMenuItem,
             this.motorsToolStripMenuItem,
             this.temperatureToolStripMenuItem,
+            this.settingsToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -154,6 +158,7 @@
             this.motorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.motor1ToolStripMenuItem,
             this.motor2ToolStripMenuItem,
+            this.motor34ToolStripMenuItem,
             this.motor3ToolStripMenuItem,
             this.motor4ToolStripMenuItem,
             this.motor5ToolStripMenuItem});
@@ -164,37 +169,45 @@
             // motor1ToolStripMenuItem
             // 
             this.motor1ToolStripMenuItem.Name = "motor1ToolStripMenuItem";
-            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor1ToolStripMenuItem.Text = "Motor1";
             this.motor1ToolStripMenuItem.Click += new System.EventHandler(this.motor1ToolStripMenuItem_Click);
             // 
             // motor2ToolStripMenuItem
             // 
             this.motor2ToolStripMenuItem.Name = "motor2ToolStripMenuItem";
-            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor2ToolStripMenuItem.Text = "Motor2";
             this.motor2ToolStripMenuItem.Click += new System.EventHandler(this.motor2ToolStripMenuItem_Click);
+            // 
+            // motor34ToolStripMenuItem
+            // 
+            this.motor34ToolStripMenuItem.Name = "motor34ToolStripMenuItem";
+            this.motor34ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor34ToolStripMenuItem.Text = "Motor3,4";
+            this.motor34ToolStripMenuItem.Click += new System.EventHandler(this.motor34ToolStripMenuItem_Click);
             // 
             // motor3ToolStripMenuItem
             // 
             this.motor3ToolStripMenuItem.Name = "motor3ToolStripMenuItem";
-            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor3ToolStripMenuItem.Text = "Motor3";
+            this.motor3ToolStripMenuItem.Visible = false;
             this.motor3ToolStripMenuItem.Click += new System.EventHandler(this.motor3ToolStripMenuItem_Click);
             // 
             // motor4ToolStripMenuItem
             // 
-            this.motor4ToolStripMenuItem.Enabled = false;
             this.motor4ToolStripMenuItem.Name = "motor4ToolStripMenuItem";
-            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor4ToolStripMenuItem.Text = "Motor4";
+            this.motor4ToolStripMenuItem.Visible = false;
             this.motor4ToolStripMenuItem.Click += new System.EventHandler(this.motor4ToolStripMenuItem_Click);
             // 
             // motor5ToolStripMenuItem
             // 
             this.motor5ToolStripMenuItem.Enabled = false;
             this.motor5ToolStripMenuItem.Name = "motor5ToolStripMenuItem";
-            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motor5ToolStripMenuItem.Text = "Motor5";
             this.motor5ToolStripMenuItem.Click += new System.EventHandler(this.motor5ToolStripMenuItem_Click);
             // 
@@ -220,6 +233,22 @@
             this.boardToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.boardToolStripMenuItem.Text = "Board";
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.motorsCouplingToolStripMenuItem});
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // motorsCouplingToolStripMenuItem
+            // 
+            this.motorsCouplingToolStripMenuItem.Enabled = false;
+            this.motorsCouplingToolStripMenuItem.Name = "motorsCouplingToolStripMenuItem";
+            this.motorsCouplingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motorsCouplingToolStripMenuItem.Text = "MotorsCoupling";
+            this.motorsCouplingToolStripMenuItem.Click += new System.EventHandler(this.motorsCouplingToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
@@ -242,7 +271,6 @@
             this.headPositionGrp.TabIndex = 6;
             this.headPositionGrp.TabStop = false;
             this.headPositionGrp.Text = "Head Position";
-            this.headPositionGrp.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // headPosZ
             // 
@@ -317,7 +345,6 @@
             this.headSpeadGrp.TabIndex = 7;
             this.headSpeadGrp.TabStop = false;
             this.headSpeadGrp.Text = "Head Speed";
-            this.headSpeadGrp.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // headSpdZ
             // 
@@ -390,34 +417,34 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(249, 60);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(534, 89);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(249, 200);
             this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart2.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(534, 89);
             this.chart2.TabIndex = 10;
             this.chart2.Text = "chart2";
@@ -535,11 +562,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem motorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motor1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motor2ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motor3ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motor4ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem motor5ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitApplicationToolStripMenuItem;
@@ -573,6 +595,14 @@
         private System.Windows.Forms.NumericUpDown _headTempVal;
         private System.Windows.Forms.NumericUpDown _boardTempVal;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motorsCouplingToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor1ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor2ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor3ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor4ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor5ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem motor34ToolStripMenuItem;
     }
 }
 

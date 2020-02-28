@@ -19,6 +19,13 @@ namespace _3D_Printer_PC
             InitializeComponent();
         }
 
+        public MotorController(int number)
+        {
+            InitializeComponent();
+            this.motorNumber = number;
+            this.Text += number.ToString();
+        }
+
         private void positionSetButt_Click(object sender, EventArgs e)
         {
             Connector.outputMessages.Enqueue("PM M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));

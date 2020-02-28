@@ -9,6 +9,7 @@ namespace _3D_Printer_PC
 {
     static class Program
     {
+        public static Form1 form;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,7 +18,8 @@ namespace _3D_Printer_PC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            form = new Form1();
+            Application.Run(form);
         }
     }
 }
