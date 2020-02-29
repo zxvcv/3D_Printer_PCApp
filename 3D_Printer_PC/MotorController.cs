@@ -56,14 +56,24 @@ namespace _3D_Printer_PC
             Connector.outputMessages.Enqueue("SM M" + motorNumber + " " + maxSpeedSet.Value.ToString().Replace(',', '.'));
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        public void updateData(MotorSettings settings)
         {
-            this.Hide();
+            positionVal.Text = settings.position.ToString();
+            zeroPositionVal.Text = settings.positionZero.ToString();
+            endPositionVal.Text = settings.positionEnd.ToString();
+            speedVal.Text = settings.speed.ToString();
+            maxSpeedVal.Text = settings.maxSpeed.ToString();
         }
 
-        private void MotorController_Load(object sender, EventArgs e)
+        private void MotorController_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            switch (motorNumber)
+            {
+                case 1: Form1.motorController1Status = false; break;
+                case 2: Form1.motorController2Status = false; break;
+                case 5: Form1.motorController5Status = false; break;
+                default: break;
+            }
         }
     }
 }

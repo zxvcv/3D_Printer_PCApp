@@ -9,10 +9,11 @@ namespace _3D_Printer_PC
     public static class Settings
     {
         private static bool calibrationMode = false;
-        public static MotorSettings motor1 { get; set; } = new MotorSettings(Form1.mc1);
-        public static MotorSettings motor2 { get; set; } = new MotorSettings(Form1.mc2);
-        public static MotorSettings motor3 { get; set; } = new MotorSettings(Form1.mc3);
-        public static MotorSettings motor4 { get; set; } = new MotorSettings(Form1.mc4);
+        public static MotorSettings motor1 { get; set; } = new MotorSettings(1);
+        public static MotorSettings motor2 { get; set; } = new MotorSettings(2);
+        public static MotorSettings motor3 { get; set; } = new MotorSettings(3);
+        public static MotorSettings motor4 { get; set; } = new MotorSettings(4);
+        public static MotorSettings motor5 { get; set; } = new MotorSettings(5);
 
         public static bool isCalibrationMode()
         {

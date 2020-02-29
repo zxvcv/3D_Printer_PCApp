@@ -51,7 +51,6 @@
             this.distanceGrp = new System.Windows.Forms.GroupBox();
             this.distanceMovButt = new System.Windows.Forms.Button();
             this.distanceSet = new System.Windows.Forms.NumericUpDown();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.endPositionGrp.SuspendLayout();
             this.zeroPositionGrp.SuspendLayout();
             this.positionGrp.SuspendLayout();
@@ -311,33 +310,20 @@
             this.distanceSet.Size = new System.Drawing.Size(77, 20);
             this.distanceSet.TabIndex = 0;
             // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(220, 317);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(75, 23);
-            this.ExitButton.TabIndex = 29;
-            this.ExitButton.Text = "CLOSE";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
             // MotorController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(307, 349);
-            this.ControlBox = false;
-            this.Controls.Add(this.ExitButton);
+            this.ClientSize = new System.Drawing.Size(307, 324);
             this.Controls.Add(this.positionGrp);
             this.Controls.Add(this.maxspeedGrp);
             this.Controls.Add(this.speedGrp);
             this.Controls.Add(this.distanceGrp);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "MotorController";
             this.Text = "Motor";
-            this.Load += new System.EventHandler(this.MotorController_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MotorController_FormClosing);
             this.endPositionGrp.ResumeLayout(false);
             this.endPositionGrp.PerformLayout();
             this.zeroPositionGrp.ResumeLayout(false);
@@ -382,6 +368,5 @@
         public System.Windows.Forms.TextBox positionVal;
         public System.Windows.Forms.TextBox maxSpeedVal;
         public System.Windows.Forms.TextBox speedVal;
-        private System.Windows.Forms.Button ExitButton;
     }
 }

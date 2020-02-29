@@ -37,6 +37,9 @@ namespace _3D_Printer_PC
                     {
                         case '1': data.motor = Settings.motor1; break;
                         case '2': data.motor = Settings.motor2; break;
+                        case '3': data.motor = Settings.motor3; break;
+                        case '4': data.motor = Settings.motor4; break;
+                        case '5': data.motor = Settings.motor5; break;
                         default: data.motor = null; break;
                     }
                 }
@@ -61,7 +64,8 @@ namespace _3D_Printer_PC
             args.motor.positionEnd = args.arguments[2];
             args.motor.speed = args.arguments[3];
             args.motor.maxSpeed = args.arguments[4];
-            args.motor.update();
+            
+            args.motor.dataUpdate();
         }
     }
 }

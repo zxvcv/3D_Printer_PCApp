@@ -14,73 +14,74 @@ namespace _3D_Printer_PC
 {
     public partial class Form1 : Form
     {
-        public static MotorController mc1 { get; set; } = new MotorController(1);
-        public static MotorController mc2 { get; set; } = new MotorController(2);
-        public static MotorController mc34 { get; set; } = new MotorController(3);
-        public static MotorController mc3 { get; set; } = new MotorController(3);
-        public static MotorController mc4 { get; set; } = new MotorController(4);
-        public static MotorController mc5 { get; set; } = new MotorController(5);
-        public static MotorsCoupling motorsCoupling { get; set; } = new MotorsCoupling();
+        public static bool motorController1Status;
+        public static bool motorController2Status;
+        public static bool motorController34Status;
+        public static bool motorController5Status;
+        public static MotorController mc1;
+        public static MotorController mc2;
+        public static DoubleMotorController mc34;
+        public static MotorController mc5;
 
         public Form1()
         {
             InitializeComponent();
             this.timer1.Start();
+            motorController1Status = false;
+            motorController1Status = false;
+            motorController34Status = false;
+            motorController5Status = false;
         }
 
         private void motor1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CommandsManager.getDataMotor1();
-            mc1.Show();
+            if (!motorController1Status)
+            {
+                CommandsManager.getDataMotor1();
+                mc1 = new MotorController(1);
+                mc1.Show();
+                motorController1Status = true;
+            }
         }
 
         private void motor2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CommandsManager.getDataMotor2();
-            mc2.Show();
+            if(!motorController2Status)
+            {
+                CommandsManager.getDataMotor2();
+                mc2 = new MotorController(2);
+                mc2.Show();
+                motorController2Status = true;
+            }
         }
 
         private void motor34ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mc34.Show();
-        }
-
-        private void motor3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mc3.Show();
-        }
-
-        private void motor4ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            mc4.Show();
+            if (!motorController2Status)
+            {
+                CommandsManager.getDataMotor3();
+                CommandsManager.getDataMotor4();
+                mc34 = new DoubleMotorController(3, 4);
+                mc34.Show();
+                motorController34Status = true;
+            }
         }
 
         private void motor5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mc5.Show();
-        }
-
-        private void motorsCouplingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            motorsCoupling.ShowDialog();
+            if (!motorController2Status)
+            {
+                //CommandsManager.getDataMotor5();
+                mc5 = new MotorController(5);
+                mc5.Show();
+                motorController5Status = true;
+            }
         }
 
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
            Connection mc = new Connection();
             mc.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (Connector.isOpen())
-            {
-                Connector.sendMessage("testowa wiadomość");
-            }
-            else
-            {
-                MessageBox.Show("nie ma polaczenia z uC");
-            }
         }
 
         private void calibrationModeBut_Click(object sender, EventArgs e)
@@ -107,13 +108,6 @@ namespace _3D_Printer_PC
             }
         }
 
-        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        static int num = 0;
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             string message;
@@ -125,6 +119,7 @@ namespace _3D_Printer_PC
             
             if(Connector.inputMessages.TryDequeue(out message))
             {
+                textBox1.Text += message;
                 CommandData commandData = CommandsParser.parseCommand(message);
                 if(commandData.execute != null)
                     CommandsParser.executeCommand(commandData);

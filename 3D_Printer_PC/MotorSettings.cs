@@ -8,7 +8,7 @@ namespace _3D_Printer_PC
 {
     public class MotorSettings
     {
-        private MotorController controller;
+        public int motorNumber { get; }
 
         public double position { get; set; }
         public double speed { get; set; }
@@ -17,18 +17,21 @@ namespace _3D_Printer_PC
         public double positionZero { get; set; }
         public double positionEnd { get; set; }
 
-        public MotorSettings(MotorController controller)
+        public MotorSettings(int motorNumber)
         {
-            this.controller = controller;
+            this.motorNumber = motorNumber;
         }
 
-        public void update()
+        public void dataUpdate()
         {
-            controller.positionVal.Text = this.position.ToString();
-            controller.zeroPositionVal.Text = this.positionZero.ToString();
-            controller.endPositionVal.Text = this.positionEnd.ToString();
-            controller.speedVal.Text = this.speed.ToString();
-            controller.maxSpeedVal.Text = this.maxSpeed.ToString();
+            switch (motorNumber)
+            {
+                case 1: if (Form1.motorController1Status) Form1.mc1.updateData(this); break;
+                case 2: if (Form1.motorController2Status) Form1.mc2.updateData(this); break;
+                case 3: if (Form1.motorController34Status) Form1.mc34.updateMotor3Data(this); break;
+                case 4: if (Form1.motorController34Status) Form1.mc34.updateMotor4Data(this); break;
+                case 5: if (Form1.motorController5Status) Form1.mc5.updateData(this); break;
+            }
         }
     }
 }
