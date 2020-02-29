@@ -22,6 +22,8 @@ namespace _3D_Printer_PC
         public static MotorController mc2;
         public static DoubleMotorController mc34;
         public static MotorController mc5;
+        public static bool configurationMenuStatus;
+        public static Configurations cnf;
 
         public Form1()
         {
@@ -31,6 +33,7 @@ namespace _3D_Printer_PC
             motorController1Status = false;
             motorController34Status = false;
             motorController5Status = false;
+            configurationMenuStatus = false;
         }
 
         private void motor1ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,7 +60,7 @@ namespace _3D_Printer_PC
 
         private void motor34ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!motorController2Status)
+            if (!motorController34Status)
             {
                 CommandsManager.getDataMotor3();
                 CommandsManager.getDataMotor4();
@@ -69,7 +72,7 @@ namespace _3D_Printer_PC
 
         private void motor5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!motorController2Status)
+            if (!motorController5Status)
             {
                 //CommandsManager.getDataMotor5();
                 mc5 = new MotorController(5);
@@ -80,31 +83,18 @@ namespace _3D_Printer_PC
 
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Connection mc = new Connection();
+            Connection mc = new Connection();
             mc.ShowDialog();
         }
 
-        private void calibrationModeBut_Click(object sender, EventArgs e)
-        { 
-            if (Settings.isCalibrationMode())
+        private void configurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!configurationMenuStatus)
             {
-                Settings.exitCalibrationMode();
-                calibrationModeBut.BackColor = Color.White;
-
-                connectionToolStripMenuItem.Enabled = true;
-            }
-            else
-            {
-                if (!Connector.isOpen())
-                {
-                    MessageBox.Show("No connection to the uC");
-                    return;
-                }
-
-                Settings.setCalibrationMode();
-                calibrationModeBut.BackColor = Color.Red;
-
-                connectionToolStripMenuItem.Enabled = false;
+                CommandsManager.getStepSizes();
+                cnf = new Configurations();
+                cnf.Show();
+                configurationMenuStatus = true;
             }
         }
 

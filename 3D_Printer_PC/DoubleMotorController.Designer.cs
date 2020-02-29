@@ -373,6 +373,7 @@
             this.groupBox1.Controls.Add(this.distanceGrp);
             this.groupBox1.Controls.Add(this.speedGrp);
             this.groupBox1.Controls.Add(this.maxspeedGrp);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -387,6 +388,7 @@
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Controls.Add(this.groupBox7);
             this.groupBox2.Controls.Add(this.groupBox8);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.Location = new System.Drawing.Point(507, 12);
             this.groupBox2.Name = "groupBox2";
@@ -775,12 +777,15 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button7.Location = new System.Drawing.Point(206, 341);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(398, 22);
             this.button7.TabIndex = 38;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Text = "UNLINK MOTORS";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // DoubleMotorController
             // 
@@ -863,8 +868,6 @@
         private System.Windows.Forms.GroupBox maxspeedGrp;
         private System.Windows.Forms.GroupBox distanceGrp;
         private System.Windows.Forms.GroupBox positionGrp;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.TextBox positionVal2;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -888,7 +891,6 @@
         public System.Windows.Forms.TextBox maxSpeedVal2;
         private System.Windows.Forms.NumericUpDown maxSpeedSet2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button distanceMovButt3;
         public System.Windows.Forms.NumericUpDown distanceSet3;
@@ -901,5 +903,8 @@
         private System.Windows.Forms.NumericUpDown maxSpeedSet3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox9;
     }
 }

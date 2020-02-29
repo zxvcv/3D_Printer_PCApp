@@ -14,6 +14,7 @@ namespace _3D_Printer_PC
         {
             cmds = new Dictionary<string, CommandData.Executable>();
             cmds.Add("DT", dataMotor);
+            cmds.Add("SP", stepSizes);
         }
 
         public static CommandData parseCommand(string command)
@@ -43,6 +44,12 @@ namespace _3D_Printer_PC
                         default: data.motor = null; break;
                     }
                 }
+
+                if (splited[0].Equals("SP"))
+                {
+                    argPos = 1;
+                    data.arguments = new double[5];
+                }
             }
 
             for (int i = argPos; i < data.arguments.Length + argPos; ++i)
@@ -66,6 +73,18 @@ namespace _3D_Printer_PC
             args.motor.maxSpeed = args.arguments[4];
             
             args.motor.dataUpdate();
+        }
+
+        private static void stepSizes(CommandData args)
+        {
+            Settings.motor1.stepSize = args.arguments[0];
+            Settings.motor2.stepSize = args.arguments[1];
+            Settings.motor3.stepSize = args.arguments[2];
+            Settings.motor4.stepSize = args.arguments[3];
+            Settings.motor5.stepSize = args.arguments[4];
+
+            if (Form1.configurationMenuStatus)
+                Form1.cnf.updateData();
         }
     }
 }

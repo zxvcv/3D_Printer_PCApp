@@ -10,6 +10,9 @@ namespace _3D_Printer_PC
     {
         public int motorNumber { get; }
 
+
+        public double stepSize { get; set; }
+
         public double position { get; set; }
         public double speed { get; set; }
 

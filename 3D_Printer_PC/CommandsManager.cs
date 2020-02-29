@@ -32,5 +32,10 @@ namespace _3D_Printer_PC
         {
             Connector.outputMessages.Enqueue("DR M5");
         }
+
+        public static void getStepSizes()
+        {
+            Connector.outputMessages.Enqueue("SR");
+        }
     }
 }

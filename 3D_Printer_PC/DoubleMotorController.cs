@@ -83,7 +83,16 @@ namespace _3D_Printer_PC
         //motor 34 buttons
         private void distanceMovButt3_Click(object sender, EventArgs e)
         {
-            Connector.outputMessages.Enqueue("DM M34 " + distanceSet3.Value.ToString().Replace(',', '.'));
+            if(Settings.motor3.speed != Settings.motor4.speed)
+            {
+                var result = MessageBox.Show("Motor speed values are unequal!\nThis operation may damege the device!\nDo you want to move motors anyway?", "Warning", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                    Connector.outputMessages.Enqueue("DM M34 " + distanceSet3.Value.ToString().Replace(',', '.'));
+            }
+            else
+            {
+                Connector.outputMessages.Enqueue("DM M34 " + distanceSet3.Value.ToString().Replace(',', '.'));
+            }
         }
         private void speedSetButt3_Click(object sender, EventArgs e)
         {
@@ -115,6 +124,34 @@ namespace _3D_Printer_PC
         private void DoubleMotorController_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.motorController34Status = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (Settings.areMotors34Coupled)
+            {
+                var result = MessageBox.Show("Are you sure, you want to unlink 3 and 4 engine?\n", "Warning", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    Settings.areMotors34Coupled = false;
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = true;
+                    groupBox9.Enabled = false;
+                    button7.Text = "LINK MOTORS";
+                }
+            }
+            else
+            {
+                var result = MessageBox.Show("Are you sure, you want to link 3 and 4 engine?\n", "Warning", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    Settings.areMotors34Coupled = true;
+                    groupBox1.Enabled = false;
+                    groupBox2.Enabled = false;
+                    groupBox9.Enabled = true;
+                    button7.Text = "UNLINK MOTORS";
+                }
+            }
         }
     }
 }
