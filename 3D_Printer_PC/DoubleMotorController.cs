@@ -33,6 +33,12 @@ namespace _3D_Printer_PC
         {
             Connector.outputMessages.Enqueue("PM M3 " + positionSet.Value.ToString().Replace(',', '.'));
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Connector.outputMessages.Enqueue("PV M3 " + positionSet.Value.ToString().Replace(',', '.'));
+        }
+
         private void positionZeroSetButt_Click(object sender, EventArgs e)
         {
             Connector.outputMessages.Enqueue("PZ M3 " + positionSet.Value.ToString().Replace(',', '.'));
@@ -58,6 +64,10 @@ namespace _3D_Printer_PC
         private void positionSetButt2_Click(object sender, EventArgs e)
         {
             Connector.outputMessages.Enqueue("PM M4 " + positionSet2.Value.ToString().Replace(',', '.'));
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Connector.outputMessages.Enqueue("PV M4 " + positionSet2.Value.ToString().Replace(',', '.'));
         }
         private void positionZeroSetButt2_Click(object sender, EventArgs e)
         {

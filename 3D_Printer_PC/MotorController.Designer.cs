@@ -51,6 +51,7 @@
             this.distanceGrp = new System.Windows.Forms.GroupBox();
             this.distanceMovButt = new System.Windows.Forms.Button();
             this.distanceSet = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.endPositionGrp.SuspendLayout();
             this.zeroPositionGrp.SuspendLayout();
             this.positionGrp.SuspendLayout();
@@ -67,7 +68,7 @@
             // 
             this.endPositionGrp.Controls.Add(this.endPositionVal);
             this.endPositionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.endPositionGrp.Location = new System.Drawing.Point(23, 86);
+            this.endPositionGrp.Location = new System.Drawing.Point(23, 112);
             this.endPositionGrp.Name = "endPositionGrp";
             this.endPositionGrp.Size = new System.Drawing.Size(99, 36);
             this.endPositionGrp.TabIndex = 32;
@@ -88,7 +89,7 @@
             // 
             this.zeroPositionGrp.Controls.Add(this.zeroPositionVal);
             this.zeroPositionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.zeroPositionGrp.Location = new System.Drawing.Point(23, 45);
+            this.zeroPositionGrp.Location = new System.Drawing.Point(23, 71);
             this.zeroPositionGrp.Name = "zeroPositionGrp";
             this.zeroPositionGrp.Size = new System.Drawing.Size(99, 35);
             this.zeroPositionGrp.TabIndex = 31;
@@ -107,6 +108,7 @@
             // 
             // positionGrp
             // 
+            this.positionGrp.Controls.Add(this.button1);
             this.positionGrp.Controls.Add(this.positionVal);
             this.positionGrp.Controls.Add(this.endPositionGrp);
             this.positionGrp.Controls.Add(this.positionSet);
@@ -117,7 +119,7 @@
             this.positionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.positionGrp.Location = new System.Drawing.Point(12, 12);
             this.positionGrp.Name = "positionGrp";
-            this.positionGrp.Size = new System.Drawing.Size(279, 131);
+            this.positionGrp.Size = new System.Drawing.Size(279, 161);
             this.positionGrp.TabIndex = 28;
             this.positionGrp.TabStop = false;
             this.positionGrp.Text = "position";
@@ -146,7 +148,7 @@
             // 
             // positionEndSetButt
             // 
-            this.positionEndSetButt.Location = new System.Drawing.Point(134, 97);
+            this.positionEndSetButt.Location = new System.Drawing.Point(134, 123);
             this.positionEndSetButt.Name = "positionEndSetButt";
             this.positionEndSetButt.Size = new System.Drawing.Size(132, 20);
             this.positionEndSetButt.TabIndex = 10;
@@ -156,7 +158,7 @@
             // 
             // positionZeroSetButt
             // 
-            this.positionZeroSetButt.Location = new System.Drawing.Point(134, 55);
+            this.positionZeroSetButt.Location = new System.Drawing.Point(134, 81);
             this.positionZeroSetButt.Name = "positionZeroSetButt";
             this.positionZeroSetButt.Size = new System.Drawing.Size(132, 20);
             this.positionZeroSetButt.TabIndex = 9;
@@ -181,7 +183,7 @@
             this.maxspeedGrp.Controls.Add(this.maxSpeedSet);
             this.maxspeedGrp.Controls.Add(this.label1);
             this.maxspeedGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.maxspeedGrp.Location = new System.Drawing.Point(12, 263);
+            this.maxspeedGrp.Location = new System.Drawing.Point(12, 293);
             this.maxspeedGrp.Name = "maxspeedGrp";
             this.maxspeedGrp.Size = new System.Drawing.Size(279, 48);
             this.maxspeedGrp.TabIndex = 27;
@@ -231,7 +233,7 @@
             this.speedGrp.Controls.Add(this.speedSetVal);
             this.speedGrp.Controls.Add(this._M1_X_Speed);
             this.speedGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.speedGrp.Location = new System.Drawing.Point(12, 209);
+            this.speedGrp.Location = new System.Drawing.Point(12, 239);
             this.speedGrp.Name = "speedGrp";
             this.speedGrp.Size = new System.Drawing.Size(279, 48);
             this.speedGrp.TabIndex = 26;
@@ -279,7 +281,7 @@
             this.distanceGrp.Controls.Add(this.distanceMovButt);
             this.distanceGrp.Controls.Add(this.distanceSet);
             this.distanceGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.distanceGrp.Location = new System.Drawing.Point(12, 149);
+            this.distanceGrp.Location = new System.Drawing.Point(12, 179);
             this.distanceGrp.Name = "distanceGrp";
             this.distanceGrp.Size = new System.Drawing.Size(190, 54);
             this.distanceGrp.TabIndex = 25;
@@ -310,12 +312,22 @@
             this.distanceSet.Size = new System.Drawing.Size(77, 20);
             this.distanceSet.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(59, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 20);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "<--- Set without moving ---";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MotorController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(307, 324);
+            this.ClientSize = new System.Drawing.Size(307, 347);
             this.Controls.Add(this.positionGrp);
             this.Controls.Add(this.maxspeedGrp);
             this.Controls.Add(this.speedGrp);
@@ -368,5 +380,6 @@
         public System.Windows.Forms.TextBox positionVal;
         public System.Windows.Forms.TextBox maxSpeedVal;
         public System.Windows.Forms.TextBox speedVal;
+        private System.Windows.Forms.Button button1;
     }
 }

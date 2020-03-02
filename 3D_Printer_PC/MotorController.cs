@@ -31,6 +31,11 @@ namespace _3D_Printer_PC
             Connector.outputMessages.Enqueue("PM M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Connector.outputMessages.Enqueue("PV M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));
+        }
+
         private void positionZeroSetButt_Click(object sender, EventArgs e)
         {
             Connector.outputMessages.Enqueue("PZ M" + motorNumber + " " + positionSet.Value.ToString().Replace(',', '.'));

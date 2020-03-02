@@ -89,6 +89,8 @@
             this.maxSpeedSet3 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.endPositionGrp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionSet)).BeginInit();
             this.zeroPositionGrp.SuspendLayout();
@@ -132,7 +134,7 @@
             // 
             this.endPositionGrp.Controls.Add(this.endPositionVal);
             this.endPositionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.endPositionGrp.Location = new System.Drawing.Point(23, 86);
+            this.endPositionGrp.Location = new System.Drawing.Point(23, 116);
             this.endPositionGrp.Name = "endPositionGrp";
             this.endPositionGrp.Size = new System.Drawing.Size(99, 36);
             this.endPositionGrp.TabIndex = 32;
@@ -167,7 +169,7 @@
             // 
             this.zeroPositionGrp.Controls.Add(this.zeroPositionVal);
             this.zeroPositionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.zeroPositionGrp.Location = new System.Drawing.Point(23, 45);
+            this.zeroPositionGrp.Location = new System.Drawing.Point(23, 75);
             this.zeroPositionGrp.Name = "zeroPositionGrp";
             this.zeroPositionGrp.Size = new System.Drawing.Size(99, 35);
             this.zeroPositionGrp.TabIndex = 31;
@@ -186,7 +188,7 @@
             // 
             // positionEndSetButt
             // 
-            this.positionEndSetButt.Location = new System.Drawing.Point(134, 97);
+            this.positionEndSetButt.Location = new System.Drawing.Point(134, 127);
             this.positionEndSetButt.Name = "positionEndSetButt";
             this.positionEndSetButt.Size = new System.Drawing.Size(132, 20);
             this.positionEndSetButt.TabIndex = 10;
@@ -196,7 +198,7 @@
             // 
             // positionZeroSetButt
             // 
-            this.positionZeroSetButt.Location = new System.Drawing.Point(134, 55);
+            this.positionZeroSetButt.Location = new System.Drawing.Point(134, 85);
             this.positionZeroSetButt.Name = "positionZeroSetButt";
             this.positionZeroSetButt.Size = new System.Drawing.Size(132, 20);
             this.positionZeroSetButt.TabIndex = 9;
@@ -317,7 +319,7 @@
             this.speedGrp.Controls.Add(this.speedSetVal);
             this.speedGrp.Controls.Add(this._M1_X_Speed);
             this.speedGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.speedGrp.Location = new System.Drawing.Point(6, 216);
+            this.speedGrp.Location = new System.Drawing.Point(6, 247);
             this.speedGrp.Name = "speedGrp";
             this.speedGrp.Size = new System.Drawing.Size(279, 48);
             this.speedGrp.TabIndex = 31;
@@ -331,7 +333,7 @@
             this.maxspeedGrp.Controls.Add(this.maxSpeedSet);
             this.maxspeedGrp.Controls.Add(this.label1);
             this.maxspeedGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.maxspeedGrp.Location = new System.Drawing.Point(6, 270);
+            this.maxspeedGrp.Location = new System.Drawing.Point(6, 301);
             this.maxspeedGrp.Name = "maxspeedGrp";
             this.maxspeedGrp.Size = new System.Drawing.Size(279, 48);
             this.maxspeedGrp.TabIndex = 32;
@@ -343,7 +345,7 @@
             this.distanceGrp.Controls.Add(this.distanceMovButt);
             this.distanceGrp.Controls.Add(this.distanceSet);
             this.distanceGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.distanceGrp.Location = new System.Drawing.Point(6, 156);
+            this.distanceGrp.Location = new System.Drawing.Point(6, 187);
             this.distanceGrp.Name = "distanceGrp";
             this.distanceGrp.Size = new System.Drawing.Size(190, 54);
             this.distanceGrp.TabIndex = 30;
@@ -352,6 +354,7 @@
             // 
             // positionGrp
             // 
+            this.positionGrp.Controls.Add(this.button1);
             this.positionGrp.Controls.Add(this.positionVal);
             this.positionGrp.Controls.Add(this.endPositionGrp);
             this.positionGrp.Controls.Add(this.positionSet);
@@ -362,7 +365,7 @@
             this.positionGrp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.positionGrp.Location = new System.Drawing.Point(6, 19);
             this.positionGrp.Name = "positionGrp";
-            this.positionGrp.Size = new System.Drawing.Size(279, 131);
+            this.positionGrp.Size = new System.Drawing.Size(279, 162);
             this.positionGrp.TabIndex = 33;
             this.positionGrp.TabStop = false;
             this.positionGrp.Text = "position";
@@ -377,7 +380,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 323);
+            this.groupBox1.Size = new System.Drawing.Size(290, 356);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MOTOR 3";
@@ -392,13 +395,14 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox2.Location = new System.Drawing.Point(507, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(290, 323);
+            this.groupBox2.Size = new System.Drawing.Size(290, 356);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MOTOR 4";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.positionVal2);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.positionSet2);
@@ -409,7 +413,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox3.Location = new System.Drawing.Point(6, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(279, 131);
+            this.groupBox3.Size = new System.Drawing.Size(279, 162);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "position";
@@ -426,7 +430,7 @@
             // 
             this.groupBox4.Controls.Add(this.endPositionVal2);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox4.Location = new System.Drawing.Point(23, 86);
+            this.groupBox4.Location = new System.Drawing.Point(23, 116);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(99, 36);
             this.groupBox4.TabIndex = 32;
@@ -461,7 +465,7 @@
             // 
             this.groupBox5.Controls.Add(this.zeroPositionVal2);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox5.Location = new System.Drawing.Point(23, 45);
+            this.groupBox5.Location = new System.Drawing.Point(23, 75);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(99, 35);
             this.groupBox5.TabIndex = 31;
@@ -480,7 +484,7 @@
             // 
             // positionEndSetButt2
             // 
-            this.positionEndSetButt2.Location = new System.Drawing.Point(134, 97);
+            this.positionEndSetButt2.Location = new System.Drawing.Point(134, 127);
             this.positionEndSetButt2.Name = "positionEndSetButt2";
             this.positionEndSetButt2.Size = new System.Drawing.Size(132, 20);
             this.positionEndSetButt2.TabIndex = 10;
@@ -490,7 +494,7 @@
             // 
             // positionZeroSetButt2
             // 
-            this.positionZeroSetButt2.Location = new System.Drawing.Point(134, 55);
+            this.positionZeroSetButt2.Location = new System.Drawing.Point(134, 85);
             this.positionZeroSetButt2.Name = "positionZeroSetButt2";
             this.positionZeroSetButt2.Size = new System.Drawing.Size(132, 20);
             this.positionZeroSetButt2.TabIndex = 9;
@@ -513,7 +517,7 @@
             this.groupBox6.Controls.Add(this.distanceMovButt2);
             this.groupBox6.Controls.Add(this.distanceSet2);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox6.Location = new System.Drawing.Point(6, 156);
+            this.groupBox6.Location = new System.Drawing.Point(6, 187);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(190, 54);
             this.groupBox6.TabIndex = 30;
@@ -551,7 +555,7 @@
             this.groupBox7.Controls.Add(this.speedSetVal2);
             this.groupBox7.Controls.Add(this.label4);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox7.Location = new System.Drawing.Point(6, 216);
+            this.groupBox7.Location = new System.Drawing.Point(6, 247);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(279, 48);
             this.groupBox7.TabIndex = 31;
@@ -601,7 +605,7 @@
             this.groupBox8.Controls.Add(this.maxSpeedSet2);
             this.groupBox8.Controls.Add(this.label5);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox8.Location = new System.Drawing.Point(6, 270);
+            this.groupBox8.Location = new System.Drawing.Point(6, 301);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(279, 48);
             this.groupBox8.TabIndex = 32;
@@ -652,7 +656,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox9.Location = new System.Drawing.Point(330, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(148, 323);
+            this.groupBox9.Size = new System.Drawing.Size(148, 356);
             this.groupBox9.TabIndex = 37;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "MOTOR 3 4";
@@ -779,7 +783,7 @@
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.Location = new System.Drawing.Point(206, 341);
+            this.button7.Location = new System.Drawing.Point(206, 374);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(398, 22);
             this.button7.TabIndex = 38;
@@ -787,11 +791,31 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(59, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 20);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "<--- Set without moving ---";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(59, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 20);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "<--- Set without moving ---";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // DoubleMotorController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 368);
+            this.ClientSize = new System.Drawing.Size(810, 399);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox2);
@@ -906,5 +930,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
