@@ -115,7 +115,7 @@
             // sDCardToolStripMenuItem
             // 
             this.sDCardToolStripMenuItem.Name = "sDCardToolStripMenuItem";
-            this.sDCardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sDCardToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.sDCardToolStripMenuItem.Text = "SD Card";
             // 
             // motorsToolStripMenuItem
@@ -132,21 +132,21 @@
             // motor1ToolStripMenuItem
             // 
             this.motor1ToolStripMenuItem.Name = "motor1ToolStripMenuItem";
-            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor1ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.motor1ToolStripMenuItem.Text = "Motor1";
             this.motor1ToolStripMenuItem.Click += new System.EventHandler(this.motor1ToolStripMenuItem_Click);
             // 
             // motor2ToolStripMenuItem
             // 
             this.motor2ToolStripMenuItem.Name = "motor2ToolStripMenuItem";
-            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor2ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.motor2ToolStripMenuItem.Text = "Motor2";
             this.motor2ToolStripMenuItem.Click += new System.EventHandler(this.motor2ToolStripMenuItem_Click);
             // 
             // motor34ToolStripMenuItem
             // 
             this.motor34ToolStripMenuItem.Name = "motor34ToolStripMenuItem";
-            this.motor34ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor34ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.motor34ToolStripMenuItem.Text = "Motor3,4";
             this.motor34ToolStripMenuItem.Click += new System.EventHandler(this.motor34ToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@
             // 
             this.motor5ToolStripMenuItem.Enabled = false;
             this.motor5ToolStripMenuItem.Name = "motor5ToolStripMenuItem";
-            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motor5ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.motor5ToolStripMenuItem.Text = "Motor5";
             this.motor5ToolStripMenuItem.Click += new System.EventHandler(this.motor5ToolStripMenuItem_Click);
             // 
@@ -171,13 +171,13 @@
             // headToolStripMenuItem
             // 
             this.headToolStripMenuItem.Name = "headToolStripMenuItem";
-            this.headToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.headToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.headToolStripMenuItem.Text = "Head";
             // 
             // boardToolStripMenuItem
             // 
             this.boardToolStripMenuItem.Name = "boardToolStripMenuItem";
-            this.boardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.boardToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.boardToolStripMenuItem.Text = "Board";
             // 
             // settingsToolStripMenuItem
@@ -192,14 +192,14 @@
             // connectionToolStripMenuItem
             // 
             this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
-            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.connectionToolStripMenuItem.Text = "Connection";
             this.connectionToolStripMenuItem.Click += new System.EventHandler(this.connectionToolStripMenuItem_Click);
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.Click += new System.EventHandler(this.configurationToolStripMenuItem_Click);
             // 
@@ -402,6 +402,7 @@
             this.RunPrgButt.TabIndex = 11;
             this.RunPrgButt.Text = "Run Program from SD Card";
             this.RunPrgButt.UseVisualStyleBackColor = false;
+            this.RunPrgButt.Click += new System.EventHandler(this.RunPrgButt_Click);
             // 
             // stopButton
             // 

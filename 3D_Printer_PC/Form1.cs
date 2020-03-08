@@ -115,5 +115,10 @@ namespace _3D_Printer_PC
                     CommandsParser.executeCommand(commandData);
             }
         }
+
+        private void RunPrgButt_Click(object sender, EventArgs e)
+        {
+            Connector.outputMessages.Enqueue("CR");
+        }
     }
 }
