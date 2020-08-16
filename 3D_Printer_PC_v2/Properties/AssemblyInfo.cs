@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("3D_Printer_PC")]
+[assembly: AssemblyTitle("3D_Printer_PC_v2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("3D_Printer_PC")]
+[assembly: AssemblyProduct("3D_Printer_PC_v2")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4a04c3a5-8d16-4da9-9bce-d170671f120e")]
+[assembly: Guid("5c7db22c-6f56-4b0b-9197-a37f48b31fab")]
 
 // Version information for an assembly consists of the following four values:
 //

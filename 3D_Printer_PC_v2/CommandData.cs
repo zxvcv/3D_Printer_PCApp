@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3D_Printer_PC
+namespace _3D_Printer_PC_v2
 {
     public class CommandData
     {

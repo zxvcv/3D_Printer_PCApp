@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3D_Printer_PC.Properties
+namespace _3D_Printer_PC_v2.Properties
 {
 
 

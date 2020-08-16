@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A04C3A5-8D16-4DA9-9BCE-D170671F120E}</ProjectGuid>
+    <ProjectGuid>{5C7DB22C-6F56-4B0B-9197-A37F48B31FAB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_3D_Printer_PC</RootNamespace>
-    <AssemblyName>3D_Printer_PC</AssemblyName>
+    <RootNamespace>_3D_Printer_PC_v2</RootNamespace>
+    <AssemblyName>3D_Printer_PC_v2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,59 +48,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandData.cs" />
-    <Compile Include="CommandsManager.cs" />
-    <Compile Include="CommandsParser.cs" />
-    <Compile Include="Configurations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Configurations.Designer.cs">
-      <DependentUpon>Configurations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Connection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Connection.Designer.cs">
-      <DependentUpon>Connection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Connector.cs" />
-    <Compile Include="DoubleMotorController.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DoubleMotorController.Designer.cs">
-      <DependentUpon>DoubleMotorController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="MotorSettings.cs" />
+    <Compile Include="OutputParser.cs" />
+    <Compile Include="InputParser.cs" />
+    <Compile Include="ConnectorPort.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MotorController.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MotorController.Designer.cs">
-      <DependentUpon>MotorController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MotorSettings.cs" />
-    <Compile Include="PortAlreadyClosedException.cs" />
-    <Compile Include="PortAlreadyOpenException.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="Configurations.resx">
-      <DependentUpon>Configurations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Connection.resx">
-      <DependentUpon>Connection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DoubleMotorController.resx">
-      <DependentUpon>DoubleMotorController.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MotorController.resx">
-      <DependentUpon>MotorController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

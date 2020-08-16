@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3D_Printer_PC
+namespace _3D_Printer_PC_v2
 {
-    public static class CommandsParser
+    public static class InputParser
     {
         private static Dictionary<string, CommandData.Executable> cmds;
 
-        static CommandsParser()
+        static InputParser()
         {
             cmds = new Dictionary<string, CommandData.Executable>();
             cmds.Add("DT", dataMotor);
-            cmds.Add("SP", stepSizes);
+            cmds.Add("SP", stepSize);
         }
 
         public static CommandData parseCommand(string command)
@@ -28,7 +28,7 @@ namespace _3D_Printer_PC
             cmds.TryGetValue(splited[0], out exe);
             data.execute = exe;
 
-            if(exe != null)
+            if (exe != null)
             {
                 if (splited[0].Equals("DT"))
                 {
@@ -51,6 +51,10 @@ namespace _3D_Printer_PC
                     data.arguments = new double[5];
                 }
             }
+            else
+            {
+                return data;
+            }
 
             for (int i = argPos; i < data.arguments.Length + argPos; ++i)
                 data.arguments[i - argPos] = Double.Parse(splited[i].Replace('.', ','));
@@ -71,20 +75,11 @@ namespace _3D_Printer_PC
             args.motor.positionEnd = args.arguments[2];
             args.motor.speed = args.arguments[3];
             args.motor.maxSpeed = args.arguments[4];
-            
-            args.motor.dataUpdate();
         }
 
-        private static void stepSizes(CommandData args)
+        private static void stepSize(CommandData args)
         {
-            Settings.motor1.stepSize = args.arguments[0];
-            Settings.motor2.stepSize = args.arguments[1];
-            Settings.motor3.stepSize = args.arguments[2];
-            Settings.motor4.stepSize = args.arguments[3];
-            Settings.motor5.stepSize = args.arguments[4];
-
-            if (Form1.configurationMenuStatus)
-                Form1.cnf.updateData();
+            args.motor.stepSize = args.arguments[0];
         }
     }
 }
