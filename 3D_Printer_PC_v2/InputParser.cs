@@ -47,8 +47,17 @@ namespace _3D_Printer_PC_v2
 
                 if (splited[0].Equals("SP"))
                 {
-                    argPos = 1;
-                    data.arguments = new double[5];
+                    argPos = 2;
+                    data.arguments = new double[1];
+                    switch (splited[1][1])
+                    {
+                        case '1': data.motor = Settings.motor1; break;
+                        case '2': data.motor = Settings.motor2; break;
+                        case '3': data.motor = Settings.motor3; break;
+                        case '4': data.motor = Settings.motor4; break;
+                        case '5': data.motor = Settings.motor5; break;
+                        default: data.motor = null; break;
+                    }
                 }
             }
             else

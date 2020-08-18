@@ -160,6 +160,7 @@ namespace _3D_Printer_PC_v2
 
                 //aliases
                 case "data_request_all":
+                case "step_size_request_all":
                     if (!args.TryGetValue("M", out m) && !args.TryGetValue("V", out v) && splitted.Length == 1)
                     {
                         output = splitted[0];

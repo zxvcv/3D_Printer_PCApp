@@ -32,7 +32,8 @@ namespace _3D_Printer_PC_v2
             "    step_size_set -m<motor_number> -v<step_size>\r\n" +
             "    program_run_SD\r\n" +
             "  AVAILABLE ALIASES:\r\n" +
-            "    data_request_all\r\n";
+            "    data_request_all\r\n" +
+            "    step_size_request_all\r\n";
 
         public Form1()
         {
@@ -47,6 +48,7 @@ namespace _3D_Printer_PC_v2
             updateDataGUI();
             connector.connect();
             alias_requestDataAll();
+            alias_requestStepSizeAll();
             updateDataGUI();
         }
 
@@ -73,6 +75,10 @@ namespace _3D_Printer_PC_v2
                     else if (command.Equals("data_request_all"))
                     {
                         alias_requestDataAll();
+                    }
+                    else if (command.Equals("step_size_request_all"))
+                    {
+                        alias_requestStepSizeAll();
                     }
                     else
                     {
@@ -153,6 +159,14 @@ namespace _3D_Printer_PC_v2
             connector.sendMessage("DR M2");
             connector.sendMessage("DR M3");
             connector.sendMessage("DR M4");
+        }
+
+        private void alias_requestStepSizeAll()
+        {
+            connector.sendMessage("SR M1");
+            connector.sendMessage("SR M2");
+            connector.sendMessage("SR M3");
+            connector.sendMessage("SR M4");
         }
     }
 }
